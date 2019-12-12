@@ -1,6 +1,6 @@
 class GenresController < ApplicationController
 
     get '/genres/?' do
-        erb: 'genres/index'
+        erb :'genres/index'
     end
 end
