@@ -1,0 +1,18 @@
+<h1>Here you can add a new song to the database</h1>
+
+<form class="song-form" action="/songs" method="POST">
+    <label for="song-name">Song Title</label>
+    <input id="song-name" type="text" name="song[:name]">
+
+    <label for="artist-name">Artist</label>
+    <input id="artist-name" type="text" name="artist[:name]">
+
+    <label for="song-genre">Genre</label>
+    <select id="song-genre" name="genre">
+        <% @genres.each do |genre| %>
+            <option value="<%= genre.id %>"><%= genre.name %></option>
+        <% end %>
+    </select>
+
+    <input type="submit" value="Create Song">
+</form>
